@@ -1,6 +1,6 @@
 {
 "basics":{
-  "photo":"3-5.jpg",
+  "photo":"download.jpg",
   "name":"ravali",
   "email":"ravalikumari2@gmail.com",
   "mobile":"333333333"
@@ -9,26 +9,40 @@
 "education":[
   {
     "course":"B.tech(Computer Science and engineering)",
-    "college":["G.Pullaiah college of engineering and technology",
+    "college":[ "G.Pullaiah college of engineering and technology",
     "2015-2019",
   "60"
 ]
 },
 {
   "course":"Intermediate",
-  "college":["Narayana junior college ",
+  "college":[ "Narayana junior college ",
   "2013-2015",
 "60"
 ]
 },
 {
   "course":"SCC",
-  "college":["Keshava reddy talent school",
+  "college":[ "Keshava reddy talent school",
   "2013",
 "60"
 ]
 }
+],
+
+"skills":[
+  {
+    "name":"web technologies",
+    "value":"HTML,CSS"
+  },
+  {
+    "name":"Operating system",
+    "value":"Linux,Windows"
+  },
+  {
+    "name":"programing languages",
+    "value":"c,c++,java"
+  }
+
 ]
-
-
 }

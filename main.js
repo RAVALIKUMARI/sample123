@@ -17,10 +17,11 @@ let data=JSON.parse(text);
 console.log(data);
 ba(data.basics);
 educa(data.education);
+skill(data.skills);
 })
 //main div class calling from html
 //var main=document.querySelector('main');
-var main=document.getElementById('.main');
+var main=document.querySelector(".main");
 //left div creation
 var left=document.createElement("div");
 left.classList.add("left");
@@ -52,25 +53,40 @@ right.classList.add("right");
 main.appendChild(right);
 //edu div creation
 var edu=document.createElement("h1");
-mb.textContent="Education Details:";
+edu.textContent="Education Details:";
 edu.appendChild(document.createElement("HR"));
 right.appendChild(edu);
 //funcion calling
-funcion edu6(education){
+function educa(education){
   for(i in education){
     var e1=document.createElement("div");
     e1.classList.add("edu1");
     e1.textContent=education[i].course;
     //list creation
-    var u1=document.createElement("u1");
-    u1.classList.add("edu2");
+    var ul=document.createElement("ul");
+    ul.classList.add("edu2");
     for(j in education[i].college){
       var li=document.createElement("li");
       li.textContent=education[i].college[j];
+      edu.appendChild(e1);
+          e1.appendChild(ul);
+          ul.appendChild(li);
     }
 
-    edu.appendChild(e1);
-    e1.appendChild(ul);
-    u1.appendChild(li);
   }
   }
+function  skill(skills){
+var skill_tittle=document.createElement("h1");
+skill_tittle.textContent="skill set:",
+//skill_tittle.appendChild(document.createElement(HR))
+
+right.appendChild(skill_tittle);
+var table=document.createElement("table");
+table.classList.add("table");
+skill_tittle.appendChild(table);
+var row="";
+for(i=0; i <skills.length;i++){
+  row+="<tr><td>"+skills[i].name+"</td><td>"+skills[i].value+"</td></tr>";
+}
+table.innerHTML=row;
+}
